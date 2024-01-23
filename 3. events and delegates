@@ -1,0 +1,57 @@
+using System.ComponentModel;
+using System.Diagnostics.Tracing;
+using System;
+using System.Linq;
+using System.Collections;
+using System.Runtime.InteropServices;
+using System.Net.Security;
+using System.Security.Authentication;
+public class EventsExample
+{
+    public delegate void delegate_Odd_number();
+    public event delegate_Odd_number event_Odd_number;
+
+        public void addition()
+        {
+            int num1 = 100; int num2 = 200;
+            int result = num1 + num2;
+            System.Console.WriteLine(result);
+
+            if(result % 2 == 0 && event_Odd_number != null)
+            {
+                //raised event
+                event_Odd_number();
+            }
+            
+        }
+    public static void Main(string[] args)
+    {
+        
+    }
+
+}
+class Program{
+    EventsExample events = new EventsExample();
+    EventsExample.event_Odd_number = new EventsExample.delegate_Odd_number(eventmessage);
+    Events.
+
+    static void eventmessage(){
+        System.Console.WriteLine("event executed");
+    }
+
+
+}
+class DelegateExample
+{
+    static int number = 100;
+    public static int addition(int num)
+    {
+        number += num;
+        return number;
+    }
+    public static int multiply(int num)
+    {
+        number *= num;
+        return number;
+    }
+}
