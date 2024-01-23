@@ -1,0 +1,50 @@
+namespace StringLibrary;
+
+public class Product
+{
+    public int productId;
+    public string productName;
+    public double cost;
+    public int quantityInStock;
+
+    static void main()
+    {
+        Product product, product1, product2;
+
+        product = new Product();
+        product1 = new Product();
+        product2 = new Product();
+
+        //initialize fields
+        product.productId = 1001;
+        product.productName = "Mobile";
+        product.cost = 20000;
+        product.quantityInStock = 1200;
+        product.productId = 1003;
+        product.productName = "Laptop";
+        product.cost = 45000;
+        product.quantityInStock = 3400;
+        product.productId = 1003;
+        product.productName = "Speakers";
+        product.cost = 36000;
+        product.quantityInStock = 800;
+
+
+        //get values from fields
+        System.Console.WriteLine("Product ID: "+ product.productId);
+        System.Console.WriteLine("Product Name: "+ product.productName);
+        System.Console.WriteLine("Product cost: "+ product.cost);
+        System.Console.WriteLine("Product quantity: "+ product.quantityInStock);
+
+        System.Console.WriteLine("Product ID 2: "+ product1.productId);
+        System.Console.WriteLine("Product Name: "+ product1.productName);
+        System.Console.WriteLine("Product cost: "+ product1.cost);
+        System.Console.WriteLine("Product quantity: "+ product1.quantityInStock);
+
+        System.Console.WriteLine("Product ID 3: "+ product2.productId);
+        System.Console.WriteLine("Product Name: "+ product2.productName);
+        System.Console.WriteLine("Product cost: "+ product2.cost);
+        System.Console.WriteLine("Product quantity: "+ product2.quantityInStock);
+
+    }
+}
